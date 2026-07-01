@@ -1,0 +1,44 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 2,
+            "passed": 0,
+            "failed": 2,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1782941424.2302327,
+            "stop": 1782941424.2443042
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_report_exists",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.00029591700058517745,
+                "start": 1782941424.2369006,
+                "stop": 1782941424.2426836,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_report_exists():\n        \"\"\"Check that the report file exists.\"\"\"\n>       assert REPORT_PATH.exists(), f\"Expected report file not found at: {REPORT_PATH}\"\nE       AssertionError: Expected report file not found at: /app/report.json\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/app/report.json').exists\n\n/tests/test_outputs.py:8: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_report_values",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0002212489998782985,
+                "start": 1782941424.2427974,
+                "stop": 1782941424.2439415,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_report_values():\n        \"\"\"Verify that the JSON report contains the correct values.\"\"\"\n>       assert REPORT_PATH.exists(), f\"Cannot verify values because {REPORT_PATH} is missing.\"\nE       AssertionError: Cannot verify values because /app/report.json is missing.\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/app/report.json').exists\n\n/tests/test_outputs.py:12: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}
